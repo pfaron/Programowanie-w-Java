@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'faron'
+version '0.1'
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'faron.Main'
+        )
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
